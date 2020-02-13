@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         final Button button46 = (Button) findViewById(R.id.button4);
         final Button button56 = (Button) findViewById(R.id.button5);
         final Button button66 = (Button) findViewById(R.id.button6);
+        final Button button76 = (Button) findViewById(R.id.button7);
+        final Button button86 = (Button) findViewById(R.id.button8);
+
+
         final Button button = (Button) findViewById(R.id.moneybutton);
         final TypeWriter tw = (TypeWriter) findViewById(R.id.moneytext1);
         final ImageView eyelid1 = (ImageView) findViewById(R.id.eyelid1);
@@ -43,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         button46.setVisibility(View.GONE);
         button56.setVisibility(View.GONE);
         button66.setVisibility(View.GONE);
+        button76.setVisibility(View.GONE);
+        button86.setVisibility(View.GONE);
         bar.setVisibility(View.GONE);
         bar2.setVisibility(View.GONE);
 
@@ -154,8 +160,8 @@ public class MainActivity extends AppCompatActivity {
                     tw.animateText("What do you do next?...");
 
                     button.setVisibility(View.GONE);
-                    button16.setVisibility(View.VISIBLE);
-                    button16.setText("Walk up to the bar");
+                    button36.setVisibility(View.VISIBLE);
+                    button36.setText("Walk up to the bar");
                     button66.setVisibility(View.VISIBLE);
                     button66.setText("Leave..");
                 }
@@ -189,17 +195,28 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
+            }
+        });
+
+        button36.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
                 if (drunkenDragon == 2) {
 
                     drunkenDragon = 11;
 
                     bar.setVisibility(View.GONE);
                     button.setVisibility(View.GONE);
+
                     bar2.setVisibility(View.VISIBLE);
-                    button36.setVisibility(View.VISIBLE);
+                    button16.setVisibility(View.VISIBLE);
                     button26.setVisibility(View.VISIBLE);
                     button46.setVisibility(View.VISIBLE);
                     button56.setVisibility(View.VISIBLE);
+                    button76.setVisibility(View.VISIBLE);
+                    button86.setVisibility(View.VISIBLE);
+
 
                     button16.setText("a beer 3$");
                     button26.setText("a Dimm 'N' Windy 5$");
