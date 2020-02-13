@@ -31,6 +31,15 @@
         android:layout_height="600dp">
     </ImageView>
 
+    <ImageView
+        android:scaleX="3.2"
+        android:scaleY="3.2"
+        android:src="@drawable/thepuddle"
+        android:id="@+id/thepuddle"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp">
+    </ImageView>
+
     <Button
         android:id="@+id/moneybutton"
         android:layout_width="1000dp"

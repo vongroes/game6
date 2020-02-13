@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     int i = 1;
     int drunkenDragon = 0;
+    int thePuddlei = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         final ImageView street = (ImageView) findViewById(R.id.street);
         final ImageView bar = (ImageView) findViewById(R.id.bar);
         final ImageView bar2 = (ImageView) findViewById(R.id.bar2);
+        final ImageView thePuddle = (ImageView) findViewById(R.id.thepuddle);
+
         button.setBackgroundResource(R.drawable.nothing);
 
         button16.setVisibility(View.GONE);
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         button86.setVisibility(View.GONE);
         bar.setVisibility(View.GONE);
         bar2.setVisibility(View.GONE);
+        thePuddle.setVisibility(View.GONE);
 
         tw.setText("");
         tw.setCharacterDelay(75);
@@ -148,6 +152,11 @@ public class MainActivity extends AppCompatActivity {
                     button46.setVisibility(View.VISIBLE);
                     button56.setVisibility(View.VISIBLE);
                     button66.setVisibility(View.VISIBLE);
+                    thePuddle.setVisibility(View.GONE);
+                    street.setVisibility(View.VISIBLE);
+
+                    button36.setText("The puddle");
+                    button66.setText("View your stats");
 
                     button.setVisibility(View.GONE);
                 }
@@ -166,6 +175,47 @@ public class MainActivity extends AppCompatActivity {
                     button66.setText("Leave..");
                 }
 
+                if (thePuddlei == 5) {
+
+                    thePuddlei = 0;
+                    i = 2;
+
+                    tw.setText("");
+                    tw.setCharacterDelay(75);
+                    tw.animateText("You look over your shoulder and see someone laughing at you from inside the laundromat. \n \n" +
+                            "you should get back to business...");
+                }
+
+                if (thePuddlei == 4) {
+
+                    thePuddlei = 5;
+
+                    tw.setText("");
+                    tw.setCharacterDelay(75);
+                    tw.animateText("So fine, so divine!" +
+                            "\n \n \n oh yes!...");
+                }
+
+                if (thePuddlei == 3) {
+
+                    thePuddlei = 4;
+
+                    tw.setText("");
+                    tw.setCharacterDelay(75);
+                    tw.animateText("More sexy than can be!" +
+                            "\n \n \n That's me!...");
+                }
+
+                if (thePuddlei == 2) {
+
+                    thePuddlei = 3;
+
+                    tw.setText("");
+                    tw.setCharacterDelay(75);
+                    tw.animateText("Too sexy by far!" +
+                            "\n \n \n you are!...");
+                }
+
                 i++;
             }
         });
@@ -176,6 +226,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (drunkenDragon == 0){
                     drunkenDragon = 1;
+                    thePuddlei=1;
 
                     street.setVisibility(View.GONE);
                     button16.setVisibility(View.GONE);
@@ -202,9 +253,51 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if (thePuddlei == 1) {
+
+                    thePuddlei = 2;
+
+                    street.setVisibility(View.GONE);
+                    button16.setVisibility(View.GONE);
+                    button26.setVisibility(View.GONE);
+                    button36.setVisibility(View.GONE);
+                    button46.setVisibility(View.GONE);
+                    button56.setVisibility(View.GONE);
+                    button66.setVisibility(View.GONE);
+                    button.setVisibility(View.VISIBLE);
+                    thePuddle.setVisibility(View.VISIBLE);
+
+                    tw.setText("");
+                    tw.setCharacterDelay(75);
+                    tw.animateText("Who's a sexy beast?" +
+                            "\n \n \n you are!...");
+                }
+
+                if (thePuddlei == 0) {
+
+                    thePuddlei = 1;
+
+                    street.setVisibility(View.GONE);
+                    button16.setVisibility(View.GONE);
+                    button26.setVisibility(View.GONE);
+                    button46.setVisibility(View.GONE);
+                    button56.setVisibility(View.GONE);
+                    button.setVisibility(View.GONE);
+                    thePuddle.setVisibility(View.VISIBLE);
+
+                    button36.setText("Flex them muscles");
+                    button66.setText("Make a funny face");
+
+                    tw.setText("");
+                    tw.setCharacterDelay(75);
+                    tw.animateText("You walk up to the puddle in the middle of the road. " +
+                            "You look down and see yourself." +
+                            "\n \n What do you do?..");
+                }
+
                 if (drunkenDragon == 2) {
 
-                    drunkenDragon = 11;
+                    drunkenDragon = 3;
 
                     bar.setVisibility(View.GONE);
                     button.setVisibility(View.GONE);
@@ -231,6 +324,31 @@ public class MainActivity extends AppCompatActivity {
                     tw.animateText("Bartender: \"What can I getcha'?\"");
 
 
+                }
+            }
+        });
+
+        button66.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (thePuddlei == 1) {
+
+                    thePuddlei = 5;
+
+                    street.setVisibility(View.GONE);
+                    button16.setVisibility(View.GONE);
+                    button26.setVisibility(View.GONE);
+                    button36.setVisibility(View.GONE);
+                    button46.setVisibility(View.GONE);
+                    button56.setVisibility(View.GONE);
+                    button66.setVisibility(View.GONE);
+                    button.setVisibility(View.VISIBLE);
+                    thePuddle.setVisibility(View.VISIBLE);
+
+                    tw.setText("");
+                    tw.setCharacterDelay(75);
+                    tw.animateText("You make a very funny face!" +
+                            "\n \n \nGod you are so funny...");
                 }
             }
         });
