@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sort"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:scaleX="3.2"
+        android:scaleY="3.2"
+        android:src="@drawable/street"
+        android:id="@+id/street"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp">
+    </ImageView>
+
+    <ImageView
+        android:src="@drawable/bt1"
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp">
+    </ImageView>
+
+    <ImageView
+        android:src="@drawable/bt2"
+        android:id="@+id/bar2"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp">
+    </ImageView>
+
+    <Button
+        android:id="@+id/moneybutton"
+        android:layout_width="1000dp"
+        android:layout_height="1000dp"
+        />
+
+    <ImageView
+        android:id="@+id/eyelid1"
+        android:layout_width="500dp"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/sort"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/eyelid2"
+        android:layout_width="500dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="250dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/sort" />
+
+    <ImageView
+    android:id="@+id/textbar"
+    android:layout_width="wrap_content"
+    android:layout_height="270dp"
+    app:srcCompat="@drawable/sort"
+    android:scaleType="fitXY"
+    android:layout_marginTop="499dp"/>
+
+    <com.example.game6.TypeWriter
+        android:id="@+id/moneytext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:textSize="24sp"
+        android:padding="4dp"
+        android:layout_alignTop="@id/textbar"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFF" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_above="@id/button2"
+        android:layout_width="205dp"
+        android:layout_height="40dp"
+        android:text="The Drunken Dragon" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_above="@id/button3"
+        android:layout_width="205dp"
+        android:layout_height="40dp"
+        android:text="McDonalds" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_alignBottom="@id/button6"
+        android:layout_alignLeft="@id/textbar"
+        android:layout_width="205dp"
+        android:layout_height="40dp"
+        android:text="The puddle" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_above="@id/button5"
+        android:layout_alignRight="@id/button6"
+        android:layout_width="205dp"
+        android:layout_height="40dp"
+        android:text="The laundromat" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_above="@id/button6"
+        android:layout_alignRight="@id/button6"
+        android:layout_width="205dp"
+        android:layout_height="40dp"
+        android:text="Go up the street" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_alignRight="@id/textbar"
+        android:layout_alignBottom="@id/textbar"
+        android:layout_width="205dp"
+        android:layout_height="40dp"
+        android:text="View your stats" />
+
+
+
+</android.widget.RelativeLayout>
+
